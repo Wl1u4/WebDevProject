@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duquesne Incline - Contact</title>
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="../static/style.css" />
+  <!-- Link to your simple JavaScript file -->
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <img src="https://i.imghippo.com/files/gSYx7156xE.png" alt="Duquesne Incline Banner">
+    </div>
+    <nav>
+      <div class="logo">
+        <img src="https://i.imghippo.com/files/TwE8934ul.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="hours.html">Hours & Tours</a></li>
+        <li><a href="#">Gift Shop</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-spacer"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p>Please fill out the form below to join our mailing list and share your comments.</p>
+
+      <form id="contact-form">
+        <!-- Name Field (Required) -->
+        <div class="form-group">
+          <label for="name">Name <span>*</span></label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email Field (Required) -->
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Comment Field (Optional) -->
+        <div class="form-group comment-group">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" placeholder="Your message here..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p>1197 West Carson Street, Pittsburgh, PA 15219</p>
+        <p>Phone Number: 412.381.1665</p>
+        <p>Fax: 412.381.1943</p>
+        <p>duq.incline@duquesneincline.org</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
+  </footer>
+</body>
+</html>
