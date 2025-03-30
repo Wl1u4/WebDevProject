@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const condition = data.current.condition.text;
         const temperature = data.current.temp_c;
         // Build the message in the desired format
-        const weatherText = `Today is a ${condition} day, it is ${temperature}°C degrees.`;
+        const weatherText = `Right now is ${condition}, and it is ${temperature}°C degrees.`;
         
         // Display the message under the "Learn More" section by targeting the container with id "weather-display"
         const weatherDisplay = document.getElementById('weather-display');
@@ -104,27 +104,31 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
   // Set up directions functionality
-  var directionsButton = document.getElementById('get-directions');
-  if (directionsButton) {
-    directionsButton.addEventListener('click', function() {
-      var originAddress = document.getElementById('origin-address').value;
-      if (!originAddress) {
-        alert("Please enter your address.");
-        return;
-      }
-      // Use your provided Google Maps API key here
-      var apiKey = "AIzaSyD_MmXyaws7XhUCXURc-YAAeSjRxooEl1k";
-      var destination = "Duquesne Incline, Pittsburgh, PA";
-      // Construct the directions URL correctly
-      var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=" 
-                    + apiKey 
-                    + "&origin=" + encodeURIComponent(originAddress) 
-                    + "&destination=" + encodeURIComponent(destination)
-                    + "&mode=driving";
-      var mapFrame = document.getElementById('map-frame');
-      if (mapFrame) {
-        mapFrame.src = mapUrl;
-      }
-    });
-  }
+var directionsButton = document.getElementById('get-directions');
+if (directionsButton) {
+  directionsButton.addEventListener('click', function() {
+    var originAddress = document.getElementById('origin-address').value;
+    if (!originAddress) {
+      alert("Please enter your address.");
+      return;
+    }
+    // Use a dedicated variable for the directions API key
+    var directionsApiKey = "AIzaSyD_MmXyaws7XhUCXURc-YAAeSjRxooEl1k";
+    var destination = "Duquesne Incline, Pittsburgh, PA";
+    var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=" +
+                 directionsApiKey +
+                 "&origin=" + encodeURIComponent(originAddress) +
+                 "&destination=" + encodeURIComponent(destination) +
+                 "&mode=driving";
+    
+    // Debug: log the URL to the console to check its correctness
+    console.log("Directions URL:", mapUrl);
+    
+    var mapFrame = document.getElementById('map-frame');
+    if (mapFrame) {
+      mapFrame.src = mapUrl;
+    }
+  });
+}
+
 
