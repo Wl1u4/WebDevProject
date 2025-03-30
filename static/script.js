@@ -29,27 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // 2. Navigation Active Link Highlighting
-    const sections = document.querySelectorAll('main section');
-    const navLinks = document.querySelectorAll('nav .nav-links a');
-    
-    function highlightActiveNav() {
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        // Check if the section is near the top of the viewport (50px threshold)
-        if (rect.top <= 50 && rect.bottom >= 50) {
-          // Remove 'active' from all links
-          navLinks.forEach(link => link.classList.remove('active'));
-          // Add 'active' to the corresponding nav link
-          if (navLinks[index]) {
-            navLinks[index].classList.add('active');
-          }
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll("nav .nav-links a");
+      const currentUrl = window.location.href;
+      navLinks.forEach(link => {
+        // Check if the current URL includes the link's href
+        if (currentUrl.indexOf(link.href) !== -1) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       });
-    }
+    });
     
-    // Initialize and update on scroll
-    highlightActiveNav();
-    window.addEventListener('scroll', highlightActiveNav);
     
     // 3. Fetch and Display Weather Data
     const apiKey = 'dcd1a73e78e446a291652038252903';
@@ -86,32 +78,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   $(document).ready(function() {
-    // Only initialize the carousel if the gift-images container exists
-    if ($('.gift-images').length > 0) {
-      setupImageCarousel();
+    // Check for both types of carousel containers
+    if ($(".gift-images").length > 0) {
+      setupImageCarousel(".gift-images");
+    }
+    if ($(".carousel-container").length > 0) {
+      setupImageCarousel(".carousel-container");
     }
   });
   
-  function setupImageCarousel() {
-    // Select the container with the gift images
-    var $carousel = $('.gift-images');
-    // Select all images within the container
-    var $images = $carousel.find('img');
+  function setupImageCarousel(selector) {
+    var $carousel = $(selector);
+    var $images = $carousel.find("img");
     var currentIndex = 0;
-    
-    // Hide all images and only show the first one
     $images.hide().eq(0).show();
-    
-    // Function to show the next image in the carousel
     function showNextImage() {
       $images.eq(currentIndex).fadeOut(500, function() {
-        // Calculate the next index (cycle back to 0 if at the end)
         currentIndex = (currentIndex + 1) % $images.length;
         $images.eq(currentIndex).fadeIn(500);
       });
     }
-    
-    // Set up the carousel to change images every 3 seconds
     setInterval(showNextImage, 3000);
   }
   
+  
+
+  // Set up directions functionality
+  var directionsButton = document.getElementById('get-directions');
+  if (directionsButton) {
+    directionsButton.addEventListener('click', function() {
+      var originAddress = document.getElementById('origin-address').value;
+      if (!originAddress) {
+        alert("Please enter your address.");
+        return;
+      }
+      // Use your provided Google Maps API key here
+      var apiKey = "AIzaSyD_MmXyaws7XhUCXURc-YAAeSjRxooEl1k";
+      var destination = "Duquesne Incline, Pittsburgh, PA";
+      // Construct the directions URL correctly
+      var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=" 
+                    + apiKey 
+                    + "&origin=" + encodeURIComponent(originAddress) 
+                    + "&destination=" + encodeURIComponent(destination)
+                    + "&mode=driving";
+      var mapFrame = document.getElementById('map-frame');
+      if (mapFrame) {
+        mapFrame.src = mapUrl;
+      }
+    });
+  }
+

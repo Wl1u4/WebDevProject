@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Duquesne Incline - About</title>
   <!-- Link to your main CSS (same as other pages) -->
   <link rel="stylesheet" href="../static/style.css" />
+  <!-- Ensure jQuery is loaded -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -19,8 +21,9 @@
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
-        <li><a href="hours.html">Hours & Tours</a></li>
-        <li><a href="#">Gift Shop</a></li>
+        <li><a href="hours.html">Hours</a></li>
+        <li><a href="tours.html" class=>Tours</a></li>
+        <li><a href="gifts.html">Gift Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-spacer"></div>
@@ -30,54 +33,104 @@
   <main>
     <section class="about-content">
       <h1>The Duquesne Incline</h1>
-      <div class="about-columns">
-        <!-- Left Column: History -->
-        <div class="about-text">
-          <h2>History</h2>
-          <p>
+      <!-- History Section -->
+      <div class="about-history">
+        <h2>History</h2>
+        <p>
             The Duquesne Incline began operation in 1877 and was originally built to transport coal.
-            Over the years, it has become an iconic landmark, offering visitors stunning views of Pittsburgh.
-            Its rich history and enduring charm make it a must-see attraction.
-          </p>
-          <p>
+          Over the years, it has become an iconic landmark, offering visitors stunning views of Pittsburgh.
+          Its rich history and enduring charm make it a must-see attraction.
+        </p>
+        <p>
             Today, the incline serves not only as a functional transportation system but also as a living museum.
-            Explore its fascinating past and learn how it helped shape the city.
-          </p>
-        </div>
+          Explore its fascinating past and learn how it helped shape the city.
+        </p>
+        <p>
+            The Duquesne Incline is one of those which follows very closely the tracks of an early coal hoist. Old newspapers indicate the existence of such a conveyance as early as 1854. Residents apparently referred to it as "Kirk Lewis' incline" and located it on the present site of The Duquesne Incline's Upper Station. Grandview Avenue was then the High Street, and the area was just beginning to be converted from farmland to homesites. This pleasantly-situated acreage was an excellent area to absorb some of the expanding population of the city, but the problem of easy access was still to be solved.
+        </p>
+        <p>
+            Although plans for a freight and passenger incline are known to have existed much earlier, financial backing was exceedingly hard to find--even the modest sum of $47,000--and actual construction was delayed. Eventually, of course, difficulties were overcome and the Incline was built. It was opened to the public May 20, 1877. The Duquesne Incline was the first Pittsburgh incline designed and built by Samuel Diescher, for Kirk Bigham and Associates. Mr. Diescher, an engineer, had become the country's foremost builder of inclines. He was also to design and build most of those that followed.
+        </p>
+        <p>
+            At the time of its public opening, it was one of four inclined planes serving the summit of Coal Hill, which later came to be known as Mount Washington. The Duquesne Incline was operated, from 1877 until 1962 by The Duquesne Inclined Plane Company. From 1964 until the present, the Incline has been operated by the Society for the Preservation of The Duquesne Heights Incline; it has been owned by the Port Authority of Allegheny County.
+        </p>
+        <p>
+            The Society for the Preservation of the Duquesne Heights Incline was formed in 1964 by the Duquesne Heights/Mount Washington neighborhood group that had rescued, repaired, and reopened the Incline in 1963. The purpose was to continue to restore and rehabilitate the cars, equipment, and both stations, and to establish the entire operation as a reliable commuter facility and a popular visitor attraction. Memberships in the society are available—call for details.
+        </p>
+      </div>
 
-        <!-- Center Column: Image -->
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1646340593382-58ac0c8717bc?q=80&w=2970&auto=format&fit=crop" alt="Duquesne Incline Side View">
-        </div>
-
-        <!-- Right Column: Facts -->
-        <div class="facts">
-          <h2>Facts</h2>
-          <ul>
-            <li><strong>Opened:</strong> May 20, 1877</li>
-            <li><strong>Built for:</strong> Coal transport</li>
-            <li><strong>Track Length:</strong> 794 feet</li>
-            <li><strong>Grade:</strong> 30.5°</li>
-            <li><strong>Elevation Gain:</strong> 600 feet</li>
-            <li><strong>Capacity:</strong> 18 passengers per car</li>
-          </ul>
+      <!-- Carousel Section (Gallery) -->
+      <div class="about-carousel">
+        <h2>Gallery</h2>
+        <div class="carousel-container">
+          <!-- Replace these with your actual images -->
+          <img src="../static/pic1.avif" alt="Duquesne Incline Image 1">
+          <img src="../static/pic2.avif" alt="Duquesne Incline Image 2">
+          <img src="../static/pic3.avif" alt="Duquesne Incline Image 3">
         </div>
       </div>
+
+      <!-- Facts Section -->
+      <div class="facts">
+        <h2>Facts</h2>
+        <ul>
+          <li><strong>Opened to Public:</strong> May 20, 1877</li>
+          <li><strong>Cost to Build:</strong> $47,000</li>
+          <li><strong>Track Length:</strong> 794 feet</li>
+          <li><strong>Grade:</strong> 30.5°</li>
+          <li><strong>Elevation Gain:</strong> 400 feet</li>
+          <li><strong>Speed:</strong> 6 miles per hour</li>
+          <li><strong>Capacity:</strong> 18 passengers per car</li>
+        </ul>
+      </div>
+
+      <section class="video">
+        <h2>Informational Video</h2>
+        <iframe width="560" height="315"
+          src="https://www.youtube-nocookie.com/embed/ve3KMUIlSGk?si=R7fPM-B3IRfa2jn-"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </section>
 
       <!-- Useful Links Section -->
       <section class="useful-links">
         <h2>Useful Links</h2>
         <ul>
-          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/TheDuquesneIncline" target="_blank">fb.com/TheDuquesneIncline</a></li>
-          <li><strong>TripAdvisor:</strong> <a href="https://www.tripadvisor.com/Attraction_Review-g53449-d274219-Reviews-The_Duquesne_Incline-Pittsburgh_Pennsylvania.html" target="_blank">The Duquesne Incline on TripAdvisor</a></li>
+          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/TheDuquesneIncline" target="_blank">The Duquesne Incline on Facebook</a></li>
+          <li><strong>Yelp:</strong> <a href="https://www.yelp.com/biz/duquesne-incline-pittsburgh" target="_blank">Duquesne Incline on Yelp</a></li>
+          <li><strong>Viator:</strong> <a href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677" target="_blank">Duquesne Incline on Viator</a></li>
+          <li><strong>Visit Pittsburgh:</strong> <a href="https://www.visitpittsburgh.com/directory/duquesne-incline/" target="_blank">Duquesne Incline on Visit Pittsburgh</a></li>
           <li><strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank">Duquesne Incline on Wikipedia</a></li>
         </ul>
       </section>
+      
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
+    <div class="footer-container">
+      <!-- Top Row: Links and Duquesne Incline text -->
+      <div class="footer-top">
+        <ul class="footer-links">
+          <li><a href="views/about.html">About</a></li>
+          <li><a href="views/hours.html">Hours & Tours</a></li>
+          <li><a href="views/contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-right">
+          <p>Duquesne Incline</p>
+        </div>
+      </div>
+      <!-- Nearly Invisible Horizontal Line -->
+      <div class="footer-line"></div>
+      <!-- Bottom Row: Centered Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Duquesne Incline. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="../static/script.js"></script>
 </body>
 </html>

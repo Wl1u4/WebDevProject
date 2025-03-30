@@ -73,7 +73,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition:  0.3s;
   }
   
   .btn:hover {
@@ -112,15 +112,72 @@
     border-radius: 8px;
   }
   
+  html, body {
+    background-color: rgb(216, 232, 251); 
+  }
+  
+
 
   footer {
-    background: #f9f9f9;
+    background-color: #003366;
+    color: #fff;           /* So the text is visible on dark background */
     text-align: center;
     padding: 20px;
-    border-top: 1px solid #ccc;
-    font-size: 0.9rem;
-    color: #666;
+    border-top: none;      /* Remove the light border if you don't want it */
+    font-size: 0.9rem;     /* Keep or adjust as you like */
+    height: 130px;
   }
+  
+  .footer-container {
+    max-width: 1200px;  /* Optional: match your main container width */
+    margin: 0 auto;     /* Center the footer content horizontally */
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* You can add margin-bottom here if you want spacing above the line */
+  }
+  
+  /* Footer links on the left */
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between each link */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ffd700; /* Gold on hover */
+  }
+  
+  /* Text on the right (e.g., "Duquesne Incline") */
+  .footer-right p {
+    margin: 0;  /* Remove default paragraph margin */
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+  /* Nearly invisible horizontal line */
+  .footer-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Very faint white line */
+    margin: 10px 0;
+  }
+  
+  /* Bottom row with centered copyright */
+  .footer-bottom {
+    text-align: center;
+  }
+  
+  
+  
   
   .banner img {
     width: 100%;
@@ -136,6 +193,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #003366; 
+    height: 105px;
     padding: 10px 20px;
     margin-top: 0;
   }
@@ -152,21 +210,54 @@
     margin: 0;
     padding: 0;
   }
+
+
   
+  
+  /* animations inspired from https://codepen.io/EvyatarDa/pen/waKXMd */
   nav li a {
-    color: #fff; 
+    position: relative; /* create a positioning context for the pseudo-element */
+    color: #fff;        
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
   }
   
-  nav li a:hover {
-    color: #ffd700; 
+  nav li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;       
+    width: 0;
+    height: 3px;        /* thinkcness of line */
+    background: #ffd700; 
+    transition: width 0.3s ease-in-out;
   }
   
+
+  nav li a.active {
+    color: #ffd700;      
+    font-weight: bold;   
+  }
+
+
+  
+  nav li a:hover::after,
+  nav li a.active::after { /*  show the underline for active links */
+    width: 100%;
+  }
+  
+  
+  
+
   
   .nav-spacer {
     width: 80px; 
+  }
+  
+
+  #weather-display {
+    color: #967f4c;  /* A vibrant orange-red, change this to your preferred color */
+    font-size: 1.1rem; /* Optional: adjust the font size */
+    font-weight: bold; /* Optional: make it bold */
   }
   
 /*-------------------------------------------------*/
@@ -193,6 +284,37 @@
   gap: 30px;
   margin-top: 20px;
 }
+
+
+
+
+.hours-of-operation {
+  background: linear-gradient(135deg, #eef7ff, #dfefff);
+  border: 2px solid #08498f;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center all text in this box */
+}
+
+.hours-of-operation h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #007BFF;
+}
+
+.hours-of-operation p {
+  margin-bottom: 1em;    /* Spacing between lines */
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  text-indent: 0;        /* Remove indentation */
+}
+
+
+
 
 /* Fare Information styling */
 .fares-info {
@@ -225,100 +347,206 @@
 }
 
 
+#directions-input {
+  margin-top: 10px;
+  text-align: left;
+}
+
+#directions-input input[type="text"] {
+  padding: 8px;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#directions-input button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#directions-input button:hover {
+  background: #0056b3;
+}
+
+
+
+
+.field-trip-program {
+  background: linear-gradient(135deg, #eef7ff, #dfefff);
+  border: 2px solid #08498f;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.field-trip-program h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #007BFF;
+}
+
+.field-trip-program p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.field-trip-program ul {
+  list-style-type: disc;
+  margin: 1em auto;
+  padding: 0;
+  text-align: left; /* Left align the list items */
+  max-width: 600px; /* Optional: limit the width */
+}
+
+.field-trip-program ul li {
+  margin-bottom: 0.75em;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+
+.activities-table,
+.tours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #eef7ff, #dfefff);
+  border: 2px solid #08498f;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures rounded corners clip content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activities-table th,
+.tours-table th {
+  padding: 10px;
+  border-bottom: 2px solid #007BFF;
+  background: #eef7ff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.activities-table td,
+.tours-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Optional: Style links inside the tables */
+.activities-table a,
+.tours-table a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.activities-table a:hover,
+.tours-table a:hover {
+  color: #0056b3;
+}
 
 
 /*-------------------------------------------------*/
 
 
 
-/* Contact Section Layout */
-.contact-section {
+
+
+
+/* Contact Section */
+#contact-form {
   max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 20px auto;  /* Centers the form horizontally */
+  padding: 20px;
+  background: none;     /* No background color */
+  border: none;         /* No border */
+  box-shadow: none;     /* No shadow */
+  text-align: left;     /* Content inside remains left-aligned */
 }
 
-/* Subtitle styling (optional) */
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-/* Form Group Styles */
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.2rem;
+#contact-form h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007BFF; /* Decorative underline */
   text-align: left;
 }
 
-.form-group label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+#contact-form .form-group {
+  margin-bottom: 15px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"] {
-  padding: 0.5rem;
+#contact-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #003366;
+}
+
+#contact-form .form-group input[type="text"],
+#contact-form .form-group input[type="email"],
+#contact-form .form-group input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
+#contact-form .form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
 
-/* ===========================
-   Additional Styles for the Comment Box 
-   (for the About section on index.html)
-   =========================== */
-   .comment-group {
-    margin-top: 1rem;
-    text-align: left;
-  }
-  
-  .comment-group label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  .comment-group textarea {
-    width: 100%;
-    height: 120px;  /* Increased height for a longer comment box */
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;  /* Ensures the same font as the rest of the page (Roboto) */
-    font-size: 1rem;
-  }
-  
-
-/* Button */
-button.btn {
+#contact-form button.btn {
+  display: inline-block;
+  padding: 10px 20px;
   background: #007BFF;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  font-size: 1.1rem;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
-button.btn:hover {
+#contact-form button.btn:hover {
   background: #0056b3;
 }
+
+
+  
+
 
 /* Contact Info */
 .contact-info {
   margin-top: 2rem;
   font-size: 0.95rem;
   color: #555;
+  text-align: center;
 }
 
 
 
 
 
+/*-------------------------------------------------*/
 
 
 
@@ -328,21 +556,26 @@ button.btn:hover {
 
 
 
-
-/* ===========================
-   About Page Specific Styles
-   =========================== */
+/* About PAge */
    .about-content {
     max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
-    text-align: center;
+    text-align: left;
   }
   
   .about-content h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
   }
+
+  .about-history p {
+    text-indent: 2em;      /* Indent the first line */
+    margin-bottom: 1.5em;   /* Add extra space between paragraphs */
+    line-height: 1.6;       /* Increase line spacing for readability */
+  }
+
+  
   
   /* Three-column layout for the main about content */
   .about-columns {
@@ -353,7 +586,7 @@ button.btn:hover {
     justify-content: center;
   }
   
-  .about-text,
+
   .about-image,
   .facts {
     flex: 1 1 250px;
@@ -381,14 +614,49 @@ button.btn:hover {
     align-items: center;
   }
   
-  .about-image img {
-    max-width: 100%;
-    border-radius: 8px;
+  .about-carousel {
+    max-width: 800px;  /* Wider container for the gallery */
+    margin: 30px auto;
+    text-align: center;
   }
   
-  /* Facts section */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;     /* Increase height for more room */
+    overflow: hidden;
+    border: 1px solid #ccc;  /* Optional: add a border */
+    border-radius: 8px;      /* Optional: rounded corners */
+  }
+  
+  .carousel-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Ensures images cover the container without distortion */
+    display: none;
+  }
+  
+  .carousel-container img:first-child {
+    display: block;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
   .facts {
-    background-color: #f9f9f9;
+    background-color: #eef7ff;
     padding: 1rem;
     border-radius: 6px;
     text-align: left;
@@ -439,12 +707,10 @@ button.btn:hover {
   }
   
 
+/*-------------------------------------------------*/
 
 
-
-/* =========================================
-   Gift Shop Page - 2×2 Image Grid on Right
-   ========================================= */
+/* Gift ship */
 .gift-section {
   margin-top: 2rem;
   padding: 0 1rem;
