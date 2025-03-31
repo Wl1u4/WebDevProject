@@ -130,6 +130,7 @@ $(document).ready(function() {
   
 
   // Map, direction
+  // https://developers.google.com/maps/documentation/embed/get-started
 var directionsButton = document.getElementById('get-directions');
 if (directionsButton) {
   directionsButton.addEventListener('click', function() {
