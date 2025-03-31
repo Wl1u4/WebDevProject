@@ -4,26 +4,26 @@
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duquesne Incline - Contact</title>
-  <!-- Link to your external CSS file -->
+
   <link rel="stylesheet" href="../static/style.css">
-  <!-- Link to your simple JavaScript file -->
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="../static/script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="banner">
-      <img src="https://i.imghippo.com/files/gSYx7156xE.png" alt="Duquesne Incline Banner">
+      <img src="../static/bannerImg.png" alt="Duquesne Incline Banner">
     </div>
     <nav>
       <div class="logo">
-        <img src="https://i.imghippo.com/files/TwE8934ul.png" alt="Logo">
+        <img src="../static/LogoImg.webp" alt="Logo">
       </div>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="hours.html">Hours</a></li>
-        <li><a href="tours.html">Tours</a></li>
+
+        <li><a href="hoursNtours.html">Hours & Tours</a></li>
         <li><a href="gifts.html">Gift Shop</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
@@ -38,45 +38,47 @@
 
       <form id="contact-form">
         <h2>Join Our Mailing List</h2>
-        <!-- Name Field (Required) -->
+ 
         <div class="form-group">
           <label for="name">Name <span>*</span></label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="2" maxlength="50">
         </div>
-        <!-- Email Field (Required) -->
+
         <div class="form-group">
           <label for="email">Email Address <span>*</span></label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required maxlength="100">
         </div>
-        <!-- SMS Text Opt-in Checkbox -->
+
         <div class="form-group">
           <input type="checkbox" id="sms-optin" name="sms-optin">
           <label for="sms-optin">I would like to receive SMS text messages</label>
         </div>
-        <!-- Mobile Phone Field (Optional, numbers only) -->
+        
         <div class="form-group">
-          <label for="mobile">Mobile Phone</label>
+          <label for="mobile">Mobile Phone(Optional)</label>
           <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" pattern="[0-9]+" maxlength="15">
         </div>
-        <!-- Zip Code Field (Optional, must be 5 digits) -->
+  
         <div class="form-group">
-          <label for="zip">Zip Code</label>
+          <label for="zip">Zip Code(Optional)</label>
           <input type="text" id="zip" name="zip" placeholder="Enter your zip code" pattern="\d{5}" maxlength="5">
         </div>
-        <!-- Submit Button -->
+
         <button type="submit" class="btn">Submit</button>
       </form>
       
 
 
-      <!-- Contact Info -->
+
       <div class="contact-info">
         <p>1197 West Carson Street, Pittsburgh, PA 15219</p>
         <p>Phone Number: 412.381.1665</p>
         <p>Fax: 412.381.1943</p>
         <p>duq.incline@duquesneincline.org</p>
+        <p> _______</p>
+        <a href="hoursNtours.html" class="btn">Where</a>
       </div>
-
+      
     </section>
   </main>
 
@@ -87,7 +89,7 @@
           <li><a href="views/about.html">About</a></li>
           <li><a href="views/hours.html">Hours & Tours</a></li>
           <li><a href="views/contact.html">Contact</a></li>
-          <li><a href="../static/ImagesCite.pdf">Citations</a></li>
+          <li><a href="../static/ImagesCite.pdf">Citations for Images</a></li>
         </ul>
         <div class="footer-right">
           <p>Duquesne Incline</p>

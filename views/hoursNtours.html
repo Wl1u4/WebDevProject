@@ -1,43 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duquesne Incline - Tours</title>
-  <link rel="stylesheet" href="../static/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duquesne Incline - Hours & Tours</title>
+  <!-- Link to your external CSS (the same one used for your other pages) -->
+  <link rel="stylesheet" href="../static/style.css" />
+  <!-- Load jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- Load jQuery for any carousel functionality if needed later -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+  <!-- Header remains unchanged -->
   <header>
     <div class="banner">
-      <img src="https://i.imghippo.com/files/gSYx7156xE.png" alt="Duquesne Incline Banner">
+      <img src="../static/bannerImg.png" alt="Duquesne Incline Banner">
     </div>
     <nav>
       <div class="logo">
-        <img src="https://i.imghippo.com/files/TwE8934ul.png" alt="Logo">
+        <img src="../static/LogoImg.webp" alt="Logo">
       </div>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="hours.html">Hours</a></li>
-        <li><a href="tours.html" class="active">Tours</a></li>
+        <!-- Set this page as active -->
+        <li><a href="hoursNtours.html" class="active">Hours & Tours</a></li>
         <li><a href="gifts.html">Gift Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
-        
       </ul>
       <div class="nav-spacer"></div>
     </nav>
   </header>
 
   <main>
-    <h1>Tours & Programs</h1>
-
+    <!-- New sub-navigation for Hours and Tours -->
+    <nav class="sub-nav">
+      <ul>
+        <li><a href="javascript:void(0);" id="tab-hours">Hours</a></li>
+        <li><a href="javascript:void(0);" id="tab-tours">Tours</a></li>
+        <li><a href="javascript:void(0);" id="tab-map">Map</a></li>
+      </ul>
+    </nav>
     
-    <!-- Section 2: Field Trip Program -->
-    <section class="field-trip-program">
+    <!-- Hours Content Section (copied from your hours.html main content) -->
+    <div id="content-hours">
+      <div class="hours-layout">
+        <section class="fares-info">
+          <section class="hours-of-operation">
+            <h2>Hours of Operation</h2>
+            <p><strong>Open 365 Days a Year</strong></p>
+            <p>Everyday From: 6:30 a.m. to 12:30 a.m.</p>
+            <p><strong>No Reservations</strong><br>No Advance Tickets</p>
+          </section>
+          <h2>Fares</h2>
+          <table class="fares-table">
+            <tbody>
+              <tr>
+                <td>Adults (Ages 12-64)</td>
+                <td>$2.50 Each Way or $5.00 Round Trip</td>
+              </tr>
+              <tr>
+                <td>Children (Ages 6-11)</td>
+                <td>$1.25 Each Way or $2.50 Round Trip</td>
+              </tr>
+              <tr>
+                <td>Children 5 and Under</td>
+                <td>Free</td>
+              </tr>
+              <tr>
+                <td>University of Pittsburgh Students</td>
+                <td>Free, with proper I.D.</td>
+              </tr>
+              <tr>
+                <td>Carnegie Mellon Students</td>
+                <td>Free, with proper I.D.</td>
+              </tr>
+              <tr>
+                <td>Chatham University Students</td>
+                <td>Free, with proper I.D.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Group Rates</h3>
+          <p><strong>Group Rates are Valid for Any Group of Ten or More People</strong></p>
+          <table class="fares-table">
+            <tbody>
+              <tr>
+                <td>Adults (Ages 12-64)</td>
+                <td>$1.75 Each Way or $3.50 Round Trip</td>
+              </tr>
+              <tr>
+                <td>Children (Ages 6-11)</td>
+                <td>$1.00 Each Way or $1.75 Round Trip</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Cash fares as well as Port Authority bus passes and tickets are accepted as payment.</p>
+          <p>Seniors age 65 or older who present a blue or yellow PRT card or a Senior Connect Card ride free.</p>
+          <p>Wheelchair accessibility is via the Upper Station located at 1220 Grandview Avenue, Pittsburgh, PA 15211.</p>
+        </section>
+      </div>
+    </div>
+    
+    <!-- Tours Content Section (copied from your tours.html main content) -->
+    <div id="content-tours">
+      <h1>Tours & Programs</h1>
+      <section class="field-trip-program">
         <h2>Field Trip Program for Students &amp; Youth Groups</h2>
         <p>
           A free field trip program is available for students and youth groups of ten or more daily – except Saturdays and Sundays after 12:00 noon due to weekend crowds and limited space.
@@ -52,7 +120,7 @@
           <li>A brief history of the French and Indian War from which the city arose</li>
         </ul>
       </section>
-
+      
       <section class="tours-and-activities">
         <h2>CITY TOURS THAT FEATURE THE DUQUESNE INCLINE</h2>
         <table class="tours-table">
@@ -96,7 +164,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Dining and Restaurants -->
             <tr>
               <td>Dining on Grandview Avenue</td>
               <td>Within Walking Distance of our Upper Station</td>
@@ -117,7 +184,6 @@
               <td>Monterey Bay Fish Grotto</td>
               <td><a href="http://www.montereybayfishgrotto.com" target="_blank">www.montereybayfishgrotto.com</a><br>412-381-1919</td>
             </tr>
-            <!-- Station Square and Nearby -->
             <tr>
               <td>Station Square</td>
               <td>Less than one mile east of our Lower Station</td>
@@ -144,13 +210,12 @@
             </tr>
             <tr>
               <td>Grand Concourse</td>
-              <td><a href="http://www.opentable.com/grand-concourse" target="_blank">www.opentable.com/grand-concourse</a><br>412-261-1717</td>
+              <td><a href="https://www.opentable.com/grand-concourse" target="_blank">www.opentable.com/grand-concourse</a><br>412-261-1717</td>
             </tr>
             <tr>
               <td>Segway in Paradise</td>
               <td><a href="https://segwaypittsburgh.com/" target="_blank">segwaypittsburgh.com</a><br>412-337-3941</td>
             </tr>
-            <!-- North Shore and Attractions -->
             <tr>
               <td>North Shore</td>
               <td>Just across the West End Bridge from our Lower Station (less than 5 minutes)</td>
@@ -276,10 +341,32 @@
           </tbody>
         </table>
       </section>
+    </div>
+
+    <div id="content-map">
+    <section class="map-section">
+        <h2>Find Us</h2>
+        <div id="map-container">
+          <!-- This iframe will be updated with directions -->
+          <iframe id="map-frame" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12146.392290993152!2d-80.03666491284179!3d40.439898000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af9e6ab935%3A0xe871d2bbc2032b83!2sDuquesne%20Incline!5e0!3m2!1sen!2sus!4v1742960526991!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <!-- New text input and button for directions -->
+        <div id="directions-input">
+          <input type="text" id="origin-address" placeholder="Enter your address">
+          <button id="get-directions" type="button">Get Directions</button>
+        </div>
+      </section>
+    </div>
 
 
-
-    
   </main>
 
   <footer>
@@ -289,7 +376,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="hours.html">Hours & Tours</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="../static/ImagesCite.pdf">Citations</a></li>
+          <li><a href="../static/ImagesCite.pdf">Citations for Images</a></li>
         </ul>
         <div class="footer-right">
           <p>Duquesne Incline</p>

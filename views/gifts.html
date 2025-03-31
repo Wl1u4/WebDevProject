@@ -4,26 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duquesne Incline - Gift Shop</title>
-  <!-- Link to the same CSS used by your other pages -->
+
   <link rel="stylesheet" href="../static/style.css" >
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 </head>
 <body>
-  <!-- Header: Banner and Nav -->
+
   <header>
     <div class="banner">
-      <img src="https://i.imghippo.com/files/gSYx7156xE.png" alt="Duquesne Incline Banner">
+      <img src="../static/bannerImg.png" alt="Duquesne Incline Banner">
     </div>
     <nav>
       <div class="logo">
-        <img src="https://i.imghippo.com/files/TwE8934ul.png" alt="Logo">
+        <img src="../static/LogoImg.webp" alt="Logo">
       </div>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="hours.html">Hours</a></li>
-        <li><a href="tours.html">Tours</a></li>
+        <li><a href="hoursNtours.html">Hours & Tours</a></li>
         <li><a href="gifts.html" class="active">Gift Shop</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -31,33 +30,46 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
+
+
+
   <main>
     <section class="gift-section">
       <h1>Come Visit Our Gift Shop</h1>
-      <!-- Two-column layout: text on left, images on right -->
-      <div class="gift-content">
-        <div class="gift-info">
-          <p>
-            1197 West Carson Street, Pittsburgh, PA 15219<br>
-            Phone Number: 412.381.1665<br>
-            Fax: 412.381.1943<br>
-            duq.incline@duquesneincline.org
-          </p>
-          <a href="hours.html" class="btn">Where</a>
-        </div>
 
-        <div class="gift-images">
-          <!-- Replace these placeholders with your actual gift item images -->
-          <img src="https://shop.heinzhistorycenter.org/cdn/shop/files/27.jpg?v=1694610693" alt="Ornament">
-          <img src="https://yinzershop.com/cdn/shop/files/Trolly-1_f69f0545-5fa3-45c8-9788-edf9021d4703.jpg?v=1734452407" alt="Sticker">
-          <img src="https://positivelypittsburgh.com/wp-content/uploads/2023/04/PI-16-Official-Duquesne-Incline-Pin.jpg" alt="Magnet">
+      <div class="gift-items">
+        <div class="gift-item">
+          <img src="../static/shotGlasses.jpg" alt="Shot Glasses">
+          <p>Shot Glasses</p>
+        </div>
+        <div class="gift-item">
+          <img src="../static/woodCar.jpg" alt="Handmade Incline Wooden Ornament">
+          <p>Handmade Incline Wooden Ornament</p>
+        </div>
+        <div class="gift-item">
+          <img src="../static/fireGift.jpg" alt="Wendell August Forge Metal Plates">
+          <p>Wendell August Forge Metal Plates</p>
         </div>
       </div>
+
+
+      <section class="find-us">
+        <h2>Find Us</h2>
+        <p>
+          1197 West Carson Street, Pittsburgh, PA 15219<br>
+          Phone: 412.381.1665<br>
+          Fax: 412.381.1943<br>
+          Email: <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a>
+        </p>
+        <p>________</p>
+        <a href="hoursNtours.html" class="btn">Where</a>
+      </section>
     </section>
   </main>
+  
+  
+  
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-top">
@@ -65,7 +77,7 @@
           <li><a href="views/about.html">About</a></li>
           <li><a href="views/hours.html">Hours & Tours</a></li>
           <li><a href="views/contact.html">Contact</a></li>
-          <li><a href="../static/ImagesCite.pdf">Citations</a></li>
+          <li><a href="../static/ImagesCite.pdf">Citations for Images</a></li>
         </ul>
         <div class="footer-right">
           <p>Duquesne Incline</p>

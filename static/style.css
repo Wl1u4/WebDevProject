@@ -24,7 +24,7 @@
 
 
   
-  /* where the main content is */
+  /* where the main content is (index.html) */
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -117,34 +117,37 @@
   }
   
 
+/*-------------------------*/
+
+/* footer stuff */
+
 
   footer {
     background-color: #003366;
-    color: #fff;           /* So the text is visible on dark background */
+    color: #fff;          
     text-align: center;
     padding: 20px;
-    border-top: none;      /* Remove the light border if you don't want it */
-    font-size: 0.9rem;     /* Keep or adjust as you like */
+    border-top: none;      
+    font-size: 0.9rem;     
     height: 130px;
   }
   
   .footer-container {
-    max-width: 1200px;  /* Optional: match your main container width */
-    margin: 0 auto;     /* Center the footer content horizontally */
+    max-width: 1200px; 
+    margin: 0 auto;    
   }
   
   .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* You can add margin-bottom here if you want spacing above the line */
   }
   
-  /* Footer links on the left */
+
   .footer-links {
     list-style: none;
     display: flex;
-    gap: 20px; /* Spacing between each link */
+    gap: 20px; 
     margin: 0;
     padding: 0;
   }
@@ -156,29 +159,28 @@
   }
   
   .footer-links a:hover {
-    color: #ffd700; /* Gold on hover */
+    color: #ffd700; 
   }
   
-  /* Text on the right (e.g., "Duquesne Incline") */
+  
   .footer-right p {
-    margin: 0;  /* Remove default paragraph margin */
-    font-size: 1rem; /* Adjust as needed */
+    margin: 0;  
+    font-size: 1rem; 
   }
   
-  /* Nearly invisible horizontal line */
   .footer-line {
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Very faint white line */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* some line*/
     margin: 10px 0;
   }
   
-  /* Bottom row with centered copyright */
+  /* centered copyrigt stuff */
   .footer-bottom {
     text-align: center;
   }
   
   
   
-  
+  /* top of website stuff*/
   .banner img {
     width: 100%;
     height: 180px; 
@@ -216,7 +218,7 @@
   
   /* animations inspired from https://codepen.io/EvyatarDa/pen/waKXMd */
   nav li a {
-    position: relative; /* create a positioning context for the pseudo-element */
+    position: relative;
     color: #fff;        
     text-decoration: none;
   }
@@ -227,7 +229,7 @@
     left: 0;
     bottom: -3px;       
     width: 0;
-    height: 3px;        /* thinkcness of line */
+    height: 3px;        
     background: #ffd700; 
     transition: width 0.3s ease-in-out;
   }
@@ -259,10 +261,15 @@
     font-size: 1.1rem; /* Optional: adjust the font size */
     font-weight: bold; /* Optional: make it bold */
   }
+
+
+
+
+
   
 /*-------------------------------------------------*/
 
-  /* Styles for the Hours & Tours page content */
+  /* styles for the Hours n Tours page content */
 .hours-tours {
   margin-top: 20px;
 }
@@ -277,7 +284,7 @@
   margin-bottom: 20px;
 }
 
-/* Flex container for two-column layout */
+
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +302,7 @@
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center all text in this box */
+  text-align: center; 
 }
 
 .hours-of-operation h2 {
@@ -306,29 +313,29 @@
 }
 
 .hours-of-operation p {
-  margin-bottom: 1em;    /* Spacing between lines */
+  margin-bottom: 1em;   
   line-height: 1.6;
   font-size: 1.1rem;
   color: #333;
-  text-indent: 0;        /* Remove indentation */
+  text-indent: 0;        
 }
 
 
 
 
-/* Fare Information styling */
+
 .fares-info {
   flex: 1;
   min-width: 300px;
 }
 
-/* Map Section styling */
+
 .map-section {
   flex: 1;
   min-width: 300px;
 }
 
-/* Table styling for fare details */
+
 .fares-table {
   width: 100%;
   border-collapse: collapse;
@@ -368,7 +375,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition:  0.3s;
 }
 
 #directions-input button:hover {
@@ -406,8 +413,8 @@
   list-style-type: disc;
   margin: 1em auto;
   padding: 0;
-  text-align: left; /* Left align the list items */
-  max-width: 600px; /* Optional: limit the width */
+  text-align: left; 
+  max-width: 600px; 
 }
 
 .field-trip-program ul li {
@@ -426,7 +433,7 @@
   background: linear-gradient(135deg, #eef7ff, #dfefff);
   border: 2px solid #08498f;
   border-radius: 12px;
-  overflow: hidden; /* Ensures rounded corners clip content */
+  overflow: hidden; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -448,7 +455,7 @@
   text-align: left;
 }
 
-/* Optional: Style links inside the tables */
+
 .activities-table a,
 .tours-table a {
   color: #007BFF;
@@ -462,6 +469,31 @@
 }
 
 
+/* sub nav bar thing */
+    .sub-nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .sub-nav ul {
+      list-style: none;
+      display: inline-flex;
+      gap: 20px;
+      padding: 0;
+    }
+    .sub-nav ul li a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      color: #ffffff;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s;
+    }
+    .sub-nav ul li a.active {
+      border-bottom: 2px solid #007BFF;
+      font-weight: bold;
+    }
+
+
 /*-------------------------------------------------*/
 
 
@@ -472,12 +504,12 @@
 /* Contact Section */
 #contact-form {
   max-width: 600px;
-  margin: 20px auto;  /* Centers the form horizontally */
+  margin: 20px auto;  
   padding: 20px;
-  background: none;     /* No background color */
-  border: none;         /* No border */
-  box-shadow: none;     /* No shadow */
-  text-align: left;     /* Content inside remains left-aligned */
+  background: none;    
+  border: none;        
+  box-shadow: none;     
+  text-align: left;     
 }
 
 #contact-form h2 {
@@ -485,7 +517,7 @@
   color: #003366;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #007BFF; /* Decorative underline */
+  border-bottom: 2px solid #007BFF; 
   text-align: left;
 }
 
@@ -570,14 +602,13 @@
   }
 
   .about-history p {
-    text-indent: 2em;      /* Indent the first line */
-    margin-bottom: 1.5em;   /* Add extra space between paragraphs */
-    line-height: 1.6;       /* Increase line spacing for readability */
+    text-indent: 2em;      
+    margin-bottom: 1.5em;   
+    line-height: 1.6;      
   }
 
   
-  
-  /* Three-column layout for the main about content */
+
   .about-columns {
     display: flex;
     flex-wrap: wrap;
@@ -615,7 +646,7 @@
   }
   
   .about-carousel {
-    max-width: 800px;  /* Wider container for the gallery */
+    max-width: 800px;  
     margin: 30px auto;
     text-align: center;
   }
@@ -623,10 +654,10 @@
   .carousel-container {
     position: relative;
     width: 100%;
-    height: 400px;     /* Increase height for more room */
+    height: 400px;     
     overflow: hidden;
-    border: 1px solid #ccc;  /* Optional: add a border */
-    border-radius: 8px;      /* Optional: rounded corners */
+    border: 1px solid #ccc;  
+    border-radius: 8px;      
   }
   
   .carousel-container img {
@@ -635,7 +666,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* Ensures images cover the container without distortion */
+    object-fit: cover;     
     display: none;
   }
   
@@ -723,50 +754,45 @@
   line-height: 1.2;
 }
 
-/* Container for the left text & right images */
-.gift-content {
-  display: flex;
-  flex-wrap: wrap;         /* So it wraps on smaller screens */
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
-/* Left column: Info and button */
-.gift-info {
-  flex: 1 1 250px;
-  line-height: 1.5;
-}
 
-.gift-info p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
 
-.gift-info a.btn {
-  display: inline-block;
-  margin-top: 1rem;
-}
 
-.gift-images {
-  position: relative;
-  width: 300px;  /* or any fixed width */
-  height: 300px; /* set a height to fit your images */
-  overflow: hidden;
-}
 
-.gift-images img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  display: none; /* initially hide images, carousel will show one */
-}
 
-.gift-images img:first-child {
+
+/* Make the gift items display vertically */
+.gift-items {
   display: block;
+  margin-bottom: 30px;
 }
+
+.gift-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gift-item img {
+  width: 100%;
+  max-width: 300px; 
+  display: block;
+  margin: 0 auto 10px; 
+}
+
+
+.find-us {
+  padding: 20px;
+  border-top: 2px solid #007BFF;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.find-us h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+
 
 
 
